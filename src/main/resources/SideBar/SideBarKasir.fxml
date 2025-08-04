@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../Helper/Style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SideBar.SideBarKasirController">
+   <children>
+      <AnchorPane prefHeight="220.0" prefWidth="1920.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#016015" height="17.0" layoutY="202.0" stroke="#016015" strokeType="INSIDE" width="1920.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <ImageView fitHeight="214.0" fitWidth="344.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Pict/Icons/TheFreshChoice-icon.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="344.0" layoutY="39.0" prefHeight="124.0" prefWidth="448.0">
+               <children>
+                  <Label fx:id="lblTitle" layoutX="146.0" layoutY="5.0" text="DashBoard" textFill="#016015">
+                     <font>
+                        <Font name="Segoe UI Bold" size="96.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="iconTitle" fitHeight="126.0" fitWidth="145.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Pict/Icons/big_home_green-icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="1467.0" layoutY="35.0" prefHeight="134.0" prefWidth="407.0">
+               <children>
+                  <ImageView fitHeight="134.0" fitWidth="138.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Pict/Icons/small_person2_green-icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblAccess" layoutX="134.0" layoutY="25.0" onMouseClicked="#onClickLblAccess" prefHeight="39.0" prefWidth="203.0" styleClass="labelAsLink" textFill="#016015" underline="true">
+                     <font>
+                        <Font name="Segoe UI Bold" size="32.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblJabatan" layoutX="134.0" layoutY="77.0" prefHeight="39.0" prefWidth="203.0" textFill="#016015">
+                     <font>
+                        <Font name="Segoe UI Bold" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a0c878" height="248.0" layoutX="-2.0" layoutY="835.0" stroke="#a0c878" strokeType="INSIDE" width="346.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#016015" height="17.0" layoutX="-2.0" layoutY="836.0" stroke="#016015" strokeType="INSIDE" width="346.0" />
+      <ImageView fitHeight="238.0" fitWidth="265.0" layoutX="36.0" layoutY="845.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pict/Icons/teamPROJ3CT-icon.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="panelKasir" layoutX="344.0" layoutY="218.0" prefHeight="864.0" prefWidth="1575.0" style="-fx-background-color: #FFFDF6;" />
+      <AnchorPane layoutX="-1.0" layoutY="218.0" prefHeight="618.0" prefWidth="344.0" style="-fx-background-color: #A0C878;">
+         <children>
+            <AnchorPane layoutY="31.0" prefHeight="82.0" prefWidth="344.0">
+               <children>
+                  <Button fx:id="btnDashboard" alignment="CENTER" mnemonicParsing="false" onAction="#onClickBtnDashboard" onMouseEntered="#onMouseEnteredDashboard" onMouseExited="#onMouseExitedDashboard" prefHeight="82.0" prefWidth="344.0" style="-fx-background-color: #FFFDF6;" text="Dashboard" textAlignment="CENTER" textFill="#a0c878">
+                     <font>
+                        <Font name="Segoe UI Bold" size="32.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fx:id="iconBtnDashboard" fitHeight="52.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Pict/Icons/small_home_green-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="128.0" prefHeight="82.0" prefWidth="344.0">
+               <children>
+                  <Button fx:id="btnPenjualan" alignment="CENTER" mnemonicParsing="false" onAction="#onClickBtnPenjualan" onMouseEntered="#onMouseEnteredPenjualan" onMouseExited="#onMouseExitedPenjualan" prefHeight="82.0" prefWidth="344.0" style="-fx-background-color: #A0C878;" text="Penjualan" textAlignment="CENTER" textFill="#fffdf6">
+                     <font>
+                        <Font name="Segoe UI Bold" size="32.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="iconBtnPenjualan" fitHeight="52.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Pict/Icons/small_cart_white-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="225.0" prefHeight="84.0" prefWidth="344.0">
+               <children>
+                  <Button fx:id="btnPengiriman" alignment="CENTER" layoutY="2.0" mnemonicParsing="false" onAction="#onClickBtnPengiriman" onMouseEntered="#onMouseEnteredPengiriman" onMouseExited="#onMouseExitedPengiriman" prefHeight="82.0" prefWidth="344.0" style="-fx-background-color: #A0C878;" text="Pengiriman" textAlignment="CENTER" textFill="#fffdf6">
+                     <font>
+                        <Font name="Segoe UI Bold" size="32.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fx:id="iconBtnPengiriman" fitHeight="52.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Pict/Icons/small_delivery_white-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="496.0" prefHeight="82.0" prefWidth="344.0">
+               <children>
+                  <Button fx:id="btnKeluar" alignment="CENTER" mnemonicParsing="false" onAction="#onClickBtnKeluar" onMouseEntered="#onMouseEnteredKeluar" onMouseExited="#onMouseExitedKeluar" prefHeight="82.0" prefWidth="344.0" style="-fx-background-color: #A0C878;" text="Keluar" textAlignment="CENTER" textFill="#fffdf6">
+                     <font>
+                        <Font name="Segoe UI Bold" size="32.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fx:id="iconBtnKeluar" fitHeight="52.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Pict/Icons/small_logout_white-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="apDataDiri" onMouseClicked="#onClickApDataDiri" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: rgba(0,0,0,0.5);" visible="false">
+         <children>
+            <AnchorPane layoutX="570.0" layoutY="45.0" prefHeight="990.0" prefWidth="814.0" style="-fx-background-color: #A0C878; -fx-border-color: #016015; -fx-border-width: 10; -fx-border-radius: 15; -fx-background-radius: 20;">
+               <children>
+                  <Label layoutX="308.0" layoutY="95.0" text="Data Diri">
+                     <font>
+                        <Font name="Segoe UI Bold" size="50.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="82.0" layoutY="225.0" text="Nama" textFill="#016015">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="79.0" layoutY="305.0" text="Tanggal Lahir" textFill="#016015">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="80.0" layoutY="391.0" text="Jenis Kelamin" textFill="#016015">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="81.0" layoutY="473.0" text="Jabatan" textFill="#016015">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="83.0" layoutY="698.0" text="Username" textFill="#016015">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="82.0" layoutY="557.0" text="Alamat" textFill="#016015">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="86.0" layoutY="783.0" text="Passsword" textFill="#016015">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="txtPassword" layoutX="400.0" layoutY="778.0" onKeyPressed="#onKeyPressTxtPassword" prefHeight="57.0" prefWidth="346.0" promptText="Password" style="-fx-background-radius: 15;">
+                     <font>
+                        <Font name="Segoe UI Bold" size="30.0" />
+                     </font>
+                  </PasswordField>
+                  <Label fx:id="lblNama" layoutX="402.0" layoutY="228.0" prefHeight="48.0" prefWidth="346.0" text="nama" textFill="#016015">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTglLahir" layoutX="400.0" layoutY="305.0" prefHeight="48.0" prefWidth="346.0" text="tanggal lahir" textFill="#016015">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblJenisKelamin" layoutX="403.0" layoutY="389.0" prefHeight="48.0" prefWidth="346.0" text="jenis kelamin" textFill="#016015">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDDJabatan" layoutX="405.0" layoutY="467.0" prefHeight="48.0" prefWidth="346.0" text="jabatan" textFill="#016015">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblAlamat" alignment="TOP_LEFT" layoutX="400.0" layoutY="555.0" prefHeight="134.0" prefWidth="346.0" text="alamat" textFill="#016015" wrapText="true">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblUsername" layoutX="400.0" layoutY="695.0" prefHeight="48.0" prefWidth="344.0" text="username" textFill="#016015">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="365.0" layoutY="226.0" text=":" textFill="#016015">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="364.0" layoutY="306.0" text=":" textFill="#016015">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="365.0" layoutY="387.0" text=":" textFill="#016015">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="364.0" layoutY="466.0" text=":" textFill="#016015">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="363.0" layoutY="555.0" text=":" textFill="#016015">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="363.0" layoutY="696.0" text=":" textFill="#016015">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="362.0" layoutY="782.0" text=":" textFill="#016015">
+                     <font>
+                        <Font name="Segoe UI Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnGantiPassword" layoutX="401.0" layoutY="867.0" mnemonicParsing="false" onAction="#onClickBtnGantiPassword" prefHeight="57.0" prefWidth="280.0" style="-fx-background-color: #016015; -fx-background-radius: 15;" text="Ganti Password" textFill="#a0c878">
+                     <font>
+                        <Font name="Segoe UI Bold" size="30.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

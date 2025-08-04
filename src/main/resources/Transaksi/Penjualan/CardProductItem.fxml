@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vbCardItem" onMouseClicked="#onClickVbCardItem" prefHeight="337.0" prefWidth="234.0" style="-fx-background-color: #016015; -fx-background-radius: 15 15 0 0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Transaksi.Penjualan.CardProductItemController">
+   <children>
+      <BorderPane fx:id="bpContent" prefHeight="244.0" prefWidth="183.0" style="-fx-background-radius: 15; -fx-border-radius: 15;">
+         <center>
+            <ImageView fx:id="imvGambarProduk" fitHeight="188.0" fitWidth="234.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <AnchorPane prefHeight="206.0" prefWidth="234.0" style="-fx-background-color: #016015;">
+         <children>
+            <Label fx:id="lblNamaProduk" layoutX="14.0" layoutY="21.0" prefHeight="19.0" prefWidth="207.0" text="Nama Produk" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Segoe UI" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblHargaSatuan" layoutX="14.0" layoutY="56.0" prefHeight="19.0" prefWidth="206.0" text="Harga / Satuan" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblJenisProduk" layoutX="14.0" layoutY="93.0" prefHeight="15.0" prefWidth="207.0" text="Jenis Produk" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblStok" layoutX="14.0" layoutY="123.0" prefHeight="15.0" prefWidth="207.0" text="Stok" textFill="#ff1e1e">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+   <padding>
+      <Insets left="1.12" />
+   </padding>
+</VBox>

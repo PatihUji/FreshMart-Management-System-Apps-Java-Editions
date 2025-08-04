@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="865.0" prefWidth="1577.0" style="-fx-background-color: #FFFDF6;" stylesheets="@../../Helper/Style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="master.Promo.PromoController">
+   <children>
+      <AnchorPane layoutX="1004.0" prefHeight="1162.0" prefWidth="573.0" style="-fx-background-color: #016015;">
+         <children>
+            <Label layoutX="75.0" layoutY="157.0" text="Nama" textFill="#fffdf6">
+               <font>
+                  <Font name="Segoe UI Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNama" layoutX="75.0" layoutY="196.0" onKeyPressed="#onKeyPressTxtNama" prefHeight="42.0" prefWidth="436.0" promptText="Nama" style="-fx-background-radius: 15;">
+               <font>
+                  <Font name="Segoe UI" size="24.0" />
+               </font>
+            </TextField>
+            <DatePicker fx:id="dpTanggalMulai" editable="false" layoutX="73.0" layoutY="445.0" onAction="#onActionDpTanggalMulai" prefHeight="42.0" prefWidth="436.0" style="-fx-opacity: 1;" styleClass="date-picker" />
+            <Label layoutX="75.0" layoutY="282.0" text="Persentase" textFill="#fffdf6">
+               <font>
+                  <Font name="Segoe UI Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSimpan" layoutX="344.0" layoutY="683.0" mnemonicParsing="false" onAction="#onClickBtnSimpan" prefHeight="46.0" prefWidth="169.0" style="-fx-background-color: #A0C878; -fx-background-radius: 18;" text="Simpan" textFill="#016015">
+               <font>
+                  <Font name="Segoe UI Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnBatal" layoutX="74.0" layoutY="683.0" mnemonicParsing="false" onAction="#onClickBtnBatal" prefHeight="46.0" prefWidth="169.0" style="-fx-background-color: #FF0004; -fx-background-radius: 18;" text="Batal" textFill="#016015">
+               <font>
+                  <Font name="Segoe UI Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <DatePicker fx:id="dpTanggalBerakhir" editable="false" layoutX="72.0" layoutY="567.0" onAction="#onActionDpTanggalBerakhir" prefHeight="42.0" prefWidth="436.0" style="-fx-opacity: 1;" styleClass="date-picker" />
+            <Label layoutX="71.0" layoutY="409.0" text="Tanggal Mulai" textFill="#fffdf6">
+               <font>
+                  <Font name="Segoe UI Bold" size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label layoutX="76.0" layoutY="520.0" text="Tanggal Berakhir" textFill="#fffdf6">
+               <font>
+                  <Font name="Segoe UI Bold" size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <TextField fx:id="txtPersentase" layoutX="75.0" layoutY="335.0" onKeyPressed="#onKeyPressTxtNama" prefHeight="42.0" prefWidth="436.0" promptText="Persentase" style="-fx-background-radius: 15;">
+               <font>
+                  <Font name="Segoe UI" size="24.0" />
+               </font>
+            </TextField>
+            <Label layoutX="147.0" layoutY="157.0" text="*" textFill="#ff0004">
+               <font>
+                  <Font name="Segoe UI Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="203.0" layoutY="282.0" text="*" textFill="#ff0004">
+               <font>
+                  <Font name="Segoe UI Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="238.0" layoutY="409.0" text="*" textFill="#ff0004">
+               <font>
+                  <Font name="Segoe UI Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="281.0" layoutY="520.0" text="*" textFill="#ff0004">
+               <font>
+                  <Font name="Segoe UI Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tbPromo" layoutX="36.0" layoutY="155.0" prefHeight="575.0" prefWidth="942.0">
+         <columns>
+            <TableColumn fx:id="colNama" prefWidth="113.0" text="Nama" />
+            <TableColumn fx:id="colPersentase" prefWidth="132.0" text="Persentase" />
+            <TableColumn fx:id="colTanggalMulai" minWidth="0.0" prefWidth="146.0" text="Tanggal Mulai" />
+            <TableColumn fx:id="colTanggalBerakhir" minWidth="0.0" prefWidth="170.0" text="Tanggal Berakhir" />
+            <TableColumn fx:id="colAksi" minWidth="0.0" prefWidth="116.0" text="Aksi" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TextField fx:id="txtCari" layoutX="36.0" layoutY="60.0" onKeyTyped="#onKeyTypedTxtCari" prefHeight="53.0" prefWidth="694.0" style="-fx-background-radius: 10; -fx-border-color: #016015; -fx-border-radius: 10; -fx-border-width: 4; -fx-padding: 0 0 0 40;">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="45.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Pict/Icons/search-icon.png" />
+         </image>
+      </ImageView>
+      <Pagination fx:id="pgnPromo" layoutX="472.0" layoutY="738.0" prefHeight="34.0" prefWidth="70.0" />
+      <Button fx:id="btnSortFilter" contentDisplay="RIGHT" layoutX="760.0" layoutY="60.0" mnemonicParsing="false" onAction="#onClickBtnSortFilter" prefHeight="53.0" prefWidth="216.0" style="-fx-background-radius: 15;" text="Urut &amp; Saring" textFill="#016015">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Pict/Icons/v_icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <AnchorPane fx:id="apSortFilter" layoutX="746.0" layoutY="121.0" prefHeight="393.0" prefWidth="244.0" style="-fx-background-color: #016015; -fx-border-color: #EF9E3C; -fx-border-width: 5; -fx-background-radius: 20; -fx-border-radius: 15;" stylesheets="@../../Helper/Style.css" visible="false">
+         <children>
+            <ComboBox fx:id="cbSort" layoutX="33.0" layoutY="57.0" onAction="#onClickCbSort" prefHeight="32.0" prefWidth="182.0" style="-fx-background-color: #FFFDF6; -fx-background-radius: 15;" />
+            <ComboBox fx:id="cbFilter" layoutX="33.0" layoutY="154.0" onAction="#onClickCbFilter" prefHeight="32.0" prefWidth="182.0" style="-fx-background-color: #FFFDF6; -fx-background-radius: 15;" />
+            <Label layoutX="33.0" layoutY="24.0" text="Urut berdasarkan" textFill="#fffdf6">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="116.0" text="Saring berdasarkan" textFill="#fffdf6">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnClear" layoutX="33.0" layoutY="311.0" mnemonicParsing="false" onAction="#onClickBtnClear" prefHeight="38.0" prefWidth="182.0" style="-fx-background-radius: 15;" text="Bersihkan" textFill="#016015">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="cbStatus" layoutX="33.0" layoutY="252.0" onAction="#onClickCbFilter" prefHeight="32.0" prefWidth="182.0" style="-fx-background-color: #FFFDF6; -fx-background-radius: 15;" />
+            <Label layoutX="33.0" layoutY="214.0" text="Berdasarkan status" textFill="#fffdf6">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

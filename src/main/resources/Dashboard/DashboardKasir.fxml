@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="867.0" prefWidth="1575.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../Helper/Style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dashboard.DashboardKasir">
+   <children>
+      <TextField fx:id="tbjumlahpenjualan" focusTraversable="false" layoutX="133.0" layoutY="308.0" prefHeight="51.0" prefWidth="406.0" style="-fx-border-color: #016015; -fx-border-width: 3;">
+         <font>
+            <Font name="Segoe UI Bold" size="48.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" layoutX="121.0" layoutY="232.0" prefHeight="58.0" prefWidth="429.0" text="Jumlah Penjualan" textAlignment="CENTER" textFill="#016015">
+         <font>
+            <Font name="Segoe UI Bold" size="48.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="72.0" fitWidth="65.0" layoutX="455.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pict/Icons/big_cart_green-icon.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tbjumlahpengiriman" focusTraversable="false" layoutX="133.0" layoutY="516.0" prefHeight="51.0" prefWidth="406.0" style="-fx-border-color: #016015; -fx-border-width: 3;">
+         <font>
+            <Font name="Segoe UI Bold" size="48.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" layoutX="121.0" layoutY="440.0" prefHeight="58.0" prefWidth="437.0" text="Jumlah Pengiriman" textAlignment="CENTER" textFill="#016015">
+         <font>
+            <Font name="Segoe UI Bold" size="48.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="72.0" fitWidth="65.0" layoutX="455.0" layoutY="533.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pict/Icons/big_delivery_green-icon.png" />
+         </image>
+      </ImageView>
+      <PieChart fx:id="pieChart" layoutX="738.0" layoutY="98.0" prefHeight="577.0" prefWidth="673.0" />
+      <DatePicker fx:id="tglMulai" focusTraversable="false" layoutX="126.0" layoutY="137.0" prefHeight="55.0" prefWidth="196.0" />
+      <DatePicker fx:id="tglSelesai" focusTraversable="false" layoutX="340.0" layoutY="137.0" prefHeight="55.0" prefWidth="196.0" />
+      <Label alignment="CENTER" layoutX="109.0" layoutY="79.0" prefHeight="58.0" prefWidth="164.0" text="Tanggal Mulai" textAlignment="CENTER" textFill="#016015">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="327.0" layoutY="79.0" prefHeight="58.0" prefWidth="164.0" text="Tanggal Selesai" textAlignment="CENTER" textFill="#016015">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnFilter" layoutX="550.0" layoutY="109.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="126.0" style="-fx-background-color: #A0C878; -fx-background-radius: 18;" text="Filter" textFill="#016015">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnBersihkan" layoutX="550.0" layoutY="170.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="147.0" style="-fx-background-color: #A0C878; -fx-background-radius: 18;" text="Bersihkan" textFill="#016015">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
