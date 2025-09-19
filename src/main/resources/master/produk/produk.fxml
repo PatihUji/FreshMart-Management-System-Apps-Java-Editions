@@ -17,9 +17,9 @@
 
 <AnchorPane prefHeight="865.0" prefWidth="1577.0" style="-fx-background-color: #FFFDF6;" stylesheets="@../../Helper/Style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="master.produk.ProdukController">
    <children>
-      <ScrollPane layoutX="1006.0" prefHeight="865.0" prefWidth="581.0" style="-fx-background-color: #016015;">
+      <ScrollPane layoutX="992.0" prefHeight="865.0" prefWidth="595.0" style="-fx-background-color: #016015;">
          <content>
-            <AnchorPane prefHeight="1160.0" prefWidth="573.0" style="-fx-background-color: #016015;">
+            <AnchorPane prefHeight="1160.0" prefWidth="585.0" style="-fx-background-color: #016015;">
                <children>
                   <Label layoutX="66.0" layoutY="229.0" text="Nama" textFill="#fffdf6">
                      <font>
